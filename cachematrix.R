@@ -35,7 +35,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 cacheSolve <- function(x, ...) {
     
-    ## Checking whether inverse is already calculated or not,
+## Checking whether inverse is already calculated or not,
     ##if yes cached calculation is retrieved
     inverse <- x$getim()
     if(!is.null(inverse)) {
@@ -43,7 +43,7 @@ cacheSolve <- function(x, ...) {
         return(inverse)
     }
     
-    ## inverse is not calculated before,so calculation must be done
+## inverse is not calculated before,so calculation must be done
     #matrix obtained
     matrix <- x$getm()
     #inverse is calculated
