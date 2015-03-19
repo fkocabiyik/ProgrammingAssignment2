@@ -4,7 +4,7 @@
 
 ## below function "makeCacheMatrix" creates a special "matrix" object that can cache its inverse.
 ## makeCacheMatrix contains a list of 4 functions to set and get the value
-## of a matrix and its calculated inverse. 
+## of a matrix and its calculated inverse.
 
 makeCacheMatrix <- function(x = matrix()) {
     ##initialization
@@ -34,8 +34,8 @@ makeCacheMatrix <- function(x = matrix()) {
 ##If the inverse has already been calculated then the cachesolve retrieves the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
-
-## Checking whether inverse is already calculated or not,
+    
+    ## Checking whether inverse is already calculated or not,
     ##if yes cached calculation is retrieved
     inverse <- x$getim()
     if(!is.null(inverse)) {
@@ -43,7 +43,7 @@ cacheSolve <- function(x, ...) {
         return(inverse)
     }
     
-## inverse is not calculated before,so calculation must be done
+    ## inverse is not calculated before,so calculation must be done
     #matrix obtained
     matrix <- x$getm()
     #inverse is calculated
