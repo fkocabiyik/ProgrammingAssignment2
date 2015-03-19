@@ -1,10 +1,12 @@
-## Put comments here that give an overall description of what your
-## functions do
+##cacheSolve and makeCacheMatrix, creates and then computes the inverse of that created matrix. 
+##if the inverse of matrix is already calculated, calculation is not re-done and that 
+##pre-calculated inverse is retrieved from the cached value.
 
-## Write a short comment describing this function!
+## below function "makeCacheMatrix" creates a special "matrix" object that can cache its inverse.
+## makeCacheMatrix contains a list of 4 functions to set and get the value
+## of a matrix and its calculated inverse. 
 
 makeCacheMatrix <- function(x = matrix()) {
-<<<<<<< HEAD
     ##initialization
     inverse <- NULL
     
@@ -23,18 +25,15 @@ makeCacheMatrix <- function(x = matrix()) {
     ##get the inverse matrix
     getinvmatrix <- function() inverse
     
-    ##list of funtions generated.    
+    ##functions listed    
     list(setm = setmatrix, getm = getmatrix, setim = setinvmatrix, getim = getinvmatrix)
-=======
-
->>>>>>> parent of d4068b5... ProgrammingAssignment2
 }
 
 
-## Write a short comment describing this function
+##Below function computes the inverse of the special "matrix" returned by makeCacheMatrix above. 
+##If the inverse has already been calculated then the cachesolve retrieves the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
-<<<<<<< HEAD
 
 ## Checking whether inverse is already calculated or not,
     ##if yes cached calculation is retrieved
@@ -52,7 +51,4 @@ cacheSolve <- function(x, ...) {
     #inverse is cached
     x$setim(inverse)
     inverse
-=======
-        ## Return a matrix that is the inverse of 'x'
->>>>>>> parent of d4068b5... ProgrammingAssignment2
 }
